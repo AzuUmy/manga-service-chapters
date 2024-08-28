@@ -9,14 +9,7 @@ import { CreateMangaDto } from '../DTO/Create-manga.dto';
 export class ChapterServices {
 
    constructor(@InjectModel('Manga') private readonly mangaModel: Model<Manga>) {}
-
-   async createManga(createMangaDto: CreateMangaDto): Promise<Manga> {
-      const createdManga = new this.mangaModel(createMangaDto);
-      return createdManga.save();
-    }
-
    
-
    async findAll(): Promise<Manga[]>{
       return this.mangaModel.find().exec();
    }

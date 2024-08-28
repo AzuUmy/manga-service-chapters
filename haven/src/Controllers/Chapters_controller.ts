@@ -7,12 +7,6 @@ import { CreateMangaDto }from'../DTO/Create-manga.dto';
 export class ChapterController {
    constructor( private readonly chapterSerivces: ChapterServices){}
 
-   @Post()
-   async create(@Body() createMangaDto: CreateMangaDto): Promise<Manga> {
-     return this.chapterSerivces.createManga(createMangaDto);
-   }
-
-
    @Get()
    async findAll(): Promise<Manga[]> {
       return this.chapterSerivces.findAll();
