@@ -1,7 +1,6 @@
 import { Controller, Get, Post, Body } from "@nestjs/common";
 import { ChapterServices } from '../Services/Chapter_Service';
 import { Manga } from '../Interfaces/Manga_interface';
-import { CreateMangaDto }from'../DTO/Create-manga.dto';
 
 @Controller('Chapters')
 export class ChapterController {
